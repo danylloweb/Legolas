@@ -17,6 +17,10 @@ export LD_LIBRARY_PATH=/usr/local/lib
 ```
 make up 
 ```
+ou 
+```
+make install 
+```
 #### Parando o ambiente sem destruir o banco:
 ```
 make down 
