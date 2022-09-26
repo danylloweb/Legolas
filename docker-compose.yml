@@ -253,12 +253,14 @@ services:
             - PHP_PG_ADMIN_AJAX_REFRESH=3
         networks:
             - legolas
+
 volumes:
     redis: null
     redissocket: null
     postgres: null
     pgadmin: null
     portainer_data: null
+
 networks:
     legolas:
         driver: bridge
