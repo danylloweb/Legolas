@@ -48,7 +48,6 @@ COPY . $DOCUMENT_ROOT
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY php.ini /usr/local/etc/php/conf.d/app.ini
 COPY php-fpm-www.conf /usr/local/etc/php-fpm.d/www.conf
-
 # Install composer
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 #RUN composer install --no-dev --no-interaction --no-scripts

@@ -1,12 +1,8 @@
 CONTAINER_NAME=api2
 
 install:
-	cp .env.example .env
 	make build
 	make up
-	make composer-install
-	make clear
-
 up:
 	docker-compose up -d
 	docker exec api2 php-fpm --daemonize
