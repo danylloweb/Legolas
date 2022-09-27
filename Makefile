@@ -5,7 +5,6 @@ install:
 	make up
 up:
 	docker-compose up -d
-	docker exec api2 php-fpm --daemonize
 	docker exec worker php-fpm --daemonize
 	docker exec onboarding php-fpm --daemonize
 	docker ps

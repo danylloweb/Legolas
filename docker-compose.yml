@@ -1,16 +1,13 @@
 version: "3.7"
 services:
     api2:
-        build:
-            context: /.setup/php7.2
-            dockerfile: Dockerfile
-        container_name: api2
-        restart: always
-        working_dir: /var/www/html
+        image: gcr.io/teladoc-main-dev/api2:develop
+        restart: unless-stopped
+        container_name: api_2
         ports:
-            - 8001:80
+         - 8001:80
         volumes:
-            - ../api2/:/var/www/html
+            - ../api2/:/var/www
         networks:
             - legolas
 
